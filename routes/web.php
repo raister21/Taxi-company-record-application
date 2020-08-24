@@ -13,6 +13,26 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', function () {
-    return view('welcome');
+
+    $id = request('id');
+    $name = request('name');
+    $address = request('address');
+    $organization = request('organization');
+    $email = request('email');
+    $mobile = request('mobile');
+
+    return view('home',[
+        'id' => $id,
+        'name' => $name,
+        'address' => $address,
+        'organization' => $organization,
+        'email' => $email,
+        'mobile' => $mobile
+    ]);
+});
+
+Route::get('/edit', function () {
+    return view('edit_customer');
 });
