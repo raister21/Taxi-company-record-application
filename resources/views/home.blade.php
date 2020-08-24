@@ -18,39 +18,36 @@
 
     <div class="content">
 
-        <div class="content">
-            <div class="title">
-                GrabTaxi
-            </div>
+        <div class="title">
+            GrabTaxi
+        </div>
 
-            <div class="links">
-                <a href="/edit">Edit</a>
-            </div>
+        <div class="add_form">
+            <form action="" method="">
+                <label for="name">Customer Name:</label>
+                <input type="text" id="name" name="name">
+                <select name="address" id="address">
+                    <option value="Lalitpur">Lalitpur</option>
+                    <option value="Bhaktapur">Bhaktapur</option>
+                    <option value="Khatmandu">Khatmandu</option>
+                    <option value="Pokhara">Pokhara</option>
+                </select>
+                <select name="organization" id="organization">
+                    <option value="Facebook">Facebook</option>
+                    <option value="Twitter">Twitter</option>
+                    <option value="Instagram">Instagram</option>
+                </select>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+                <label for="mobile">Mobile:</label>
+                <input type="mobile" id="mobile" name="mobile">
+                <input type="submit" value="Add">
+                
+            </form>
         </div>
         
-        <form action="" method="">
-            <label for="name">Customer Name:</label>
-            <input type="text" id="name" name="name">
-            <select name="address" id="address">
-                <option value="Lalitpur">Lalitpur</option>
-                <option value="Bhaktapur">Bhaktapur</option>
-                <option value="Khatmandu">Khatmandu</option>
-                <option value="Pokhara">Pokhara</option>
-            </select>
-            <select name="organization" id="organization">
-                <option value="Facebook">Facebook</option>
-                <option value="Twitter">Twitter</option>
-                <option value="Instagram">Instagram</option>
-            </select>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email">
-            <label for="mobile">Mobile:</label>
-            <input type="mobile" id="mobile" name="mobile">
-            <input type="submit" value="Add">
-            
-        </form>
 
-        <ul>
+        <ul class="customer_block" >
             <li>{{ $name }}</li>
             <li>{{ $address }}</li>
             <li>{{ $organization }}</li>
