@@ -46,16 +46,13 @@
             </form>
         </div>
         
-
+        @foreach($customers as $customer)
         <ul class="customer_block" >
-            <li>{{ $name }}</li>
-            <li>{{ $address }}</li>
-            <li>{{ $organization }}</li>
-            <li>{{ $email }}</li>
-            <li>{{ $mobile }}</li>
-
+            <li>{{ $customer->customerName }}</li>
+            <li>{{ $customer->address }}</li>
         </ul>
-        
+        @endforeach
+
     </div>
 </div>
 
