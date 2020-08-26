@@ -5,6 +5,7 @@ html, body {
     font-family: 'Nunito', sans-serif;
     font-weight: 200;
     height: 100vh;
+    overflow-x: hidden;
     margin: 0;
     min-height: 100vh;
 }
@@ -80,12 +81,43 @@ header {
 
 .customer_block {
     list-style: none;
+
 }
+
+.customers_details {
+    background-color: white;
+    padding: 10px 20px;
+    text-align: left;
+    
+    
+}
+
+.customer_container {
+    padding: 20px 10px;
+    margin-left: 50px;
+}
+
+.customer_container > * {
+    display: inline-block;
+    vertical-align: center;
+    text-align: left;
+}
+
+.details > * {
+    display: inline-block;
+    vertical-align: center;
+    text-align: left;
+}
+
+.details {
+    margin-left: 50px;
+}
+
 
 footer {
     padding: 10px 30px;
     color: white;
     bottom: 0;
     width: 100%;
-    position: absolute;
+    position: relative;
 }

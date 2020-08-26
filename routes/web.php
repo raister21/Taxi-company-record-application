@@ -15,5 +15,5 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', 'CustomerController@index');
-
+Route::post('/','CustomerController@store');
 Route::get('/edit', 'CustomerController@edit');
