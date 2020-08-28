@@ -13,8 +13,15 @@ class CustomerController extends Controller
         return view('home',['customers' => $customers]);
     }
 
-    public function edit(){
-        return view('edit_customer');
+    public function editIndex(){
+        $customers = customers::all();
+
+        return view('edit_customer',['customers' => $customers]);
+    }
+
+    public function edit($id){
+        $customer = customers::findorfail($id);
+        return view('show_customer',['customer' => $customer]);
     }
 
     public function store(){
@@ -40,5 +47,14 @@ class CustomerController extends Controller
 
         $customers = customers::all();
         return view('home',['customers' => $customers]);
+    }
+
+    public function editor(){
+
+        $customerid = request('re_id');
+
+        $customer = customers::findorfail($customerid);
+        return view('show_customer',['customer' => $customer]);
+        
     }
 }

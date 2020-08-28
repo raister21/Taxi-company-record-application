@@ -88,8 +88,7 @@ header {
     background-color: white;
     padding: 10px 20px;
     text-align: left;
-    
-    
+   
 }
 
 .customer_container {
@@ -111,8 +110,13 @@ header {
 
 .details {
     margin-left: 50px;
+    
 }
 
+.edit_each {
+    background-color: white;
+    padding: 35px 0px;
+}
 
 footer {
     padding: 10px 30px;
@@ -120,4 +124,8 @@ footer {
     bottom: 0;
     width: 100%;
     position: relative;
+}
+
+.buttons_group {
+    text-align: right;
 }
