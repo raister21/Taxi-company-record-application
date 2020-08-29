@@ -19,3 +19,4 @@ Route::post('/','CustomerController@store');
 Route::get('/edit', 'CustomerController@editIndex');
 Route::get('/edit/{id}', 'CustomerController@edit');
 Route::post('/edit', 'CustomerController@editor');
+Route::delete('/edit/{id}','CustomerController@destroy');

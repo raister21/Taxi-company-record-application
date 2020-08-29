@@ -48,7 +48,11 @@
                     
 
             </div>
-                    <button type="button">Click</button>
+                <form action="/edit/{{ $customer->id }}" method="POST">
+                @csrf
+                @method('DELETE')
+                    <button>Delete</button>
+                </form>
             </div>
 
         </div>

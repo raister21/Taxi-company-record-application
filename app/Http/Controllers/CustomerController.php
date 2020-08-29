@@ -57,4 +57,13 @@ class CustomerController extends Controller
         return view('show_customer',['customer' => $customer]);
         
     }
+
+    public function destroy($id){
+        $customer = customers::findorfail($id);
+        $customer->delete();
+
+        $customers = customers::all();
+
+        return view('home',['customers' => $customers]);
+    }
 }
