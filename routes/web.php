@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', 'CustomerController@index');
 Route::post('/','CustomerController@store');
 Route::get('/edit', 'CustomerController@editIndex');
+Route::put('/edit/{id}','CustomerController@update');
 Route::get('/edit/{id}', 'CustomerController@edit');
 Route::post('/edit', 'CustomerController@editor');
 Route::delete('/edit/{id}','CustomerController@destroy');

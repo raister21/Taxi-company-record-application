@@ -47,14 +47,48 @@
                         
                     
 
-            </div>
-                <form action="/edit/{{ $customer->id }}" method="POST">
-                @csrf
-                @method('DELETE')
-                    <button>Delete</button>
-                </form>
-            </div>
 
+            </div> 
+
+            <div class="edit_form">
+            <form action="/edit/{{ $customer->id }}" method="POST">
+                @method('PUT')
+                @csrf
+                <label for="name">Customer Name:</label>
+                <input type="text" id="name" name="name">
+                <select name="address" id="address">
+                    <option value="Lalitpur">Lalitpur</option>
+                    <option value="Bhaktapur">Bhaktapur</option>
+                    <option value="Khatmandu">Khatmandu</option>
+                    <option value="Pokhara">Pokhara</option>
+                </select>
+                <select name="organization" id="organization">
+                    <option value="Facebook">Facebook</option>
+                    <option value="Twitter">Twitter</option>
+                    <option value="Instagram">Instagram</option>
+                </select>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+                <label for="mobile">Mobile:</label>
+                <input type="mobile" id="mobile" name="mobile">
+                <select name="sex" id="sex">
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+                <input type="submit" value="Edit">
+                
+            </form>
+        
+            
+
+            <form action="/edit/{{ $customer->id }}" method="POST">
+            @csrf
+            @method('DELETE')
+                <button>Delete</button>
+            </form>
+            </div>
+        </div>
+        
         </div>
     </div>
 </div>
